@@ -1,0 +1,145 @@
+<div id="__ROOT_ID__" aria-label="Second Coder adjudication panel">
+  <header class="sc-head">
+    <div><div class="sc-kicker">SECOND CODER · STAGE 3</div><h2>Review decisions</h2><p data-paper></p></div>
+    <div class="sc-count" data-count></div>
+  </header>
+  <p class="sc-context" data-context></p>
+  <div data-content></div>
+  <p class="sc-status" data-status role="status" aria-live="polite">No choices have been submitted.</p>
+</div>
+<style>
+#__ROOT_ID__{--sc-bg:light-dark(#ffffff,#202124);--sc-text:light-dark(#17232d,#f1f3f5);--sc-line:light-dark(#d5dce0,#505861);--sc-soft:light-dark(#f3f6f7,#2b3036);--sc-selected:light-dark(#254e56,#b3d9df);--sc-on-selected:light-dark(#ffffff,#142a2e);--sc-error:light-dark(#a52222,#ffb3b3);font-family:Arial,sans-serif;font-size:15px;line-height:1.5;color:var(--sc-text);background:var(--sc-bg);padding:20px;border:1px solid var(--sc-line);border-radius:14px;box-sizing:border-box}
+#__ROOT_ID__ *{box-sizing:border-box}
+#__ROOT_ID__ h2{font-size:22px;margin:1px 0 3px;font-weight:700}
+#__ROOT_ID__ h3{font-size:16px;margin:0 0 4px;font-weight:700}
+#__ROOT_ID__ p{margin:6px 0}
+#__ROOT_ID__ .sc-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding-right:66px}
+#__ROOT_ID__ .sc-kicker{font-size:11px;letter-spacing:.07em;font-weight:700}
+#__ROOT_ID__ .sc-count{font-weight:700;white-space:nowrap}
+#__ROOT_ID__ .sc-context{padding:9px 0 14px;border-bottom:1px solid var(--sc-line);font-size:13px}
+#__ROOT_ID__ .sc-group{padding:15px 0;border-bottom:1px solid var(--sc-line)}
+#__ROOT_ID__ .sc-title{display:flex;align-items:start;justify-content:space-between;gap:8px}
+#__ROOT_ID__ .sc-meta{font-size:13px;overflow-wrap:anywhere}
+#__ROOT_ID__ .sc-choices{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:10px 0}
+#__ROOT_ID__ button{font:inherit;color:var(--sc-text);background:var(--sc-bg);border:1px solid var(--sc-line);border-radius:7px;padding:7px 11px;min-height:38px;max-width:100%;white-space:normal}
+#__ROOT_ID__ button:focus-visible,#__ROOT_ID__ input:focus-visible{outline:3px solid var(--sc-selected);outline-offset:3px}
+#__ROOT_ID__ button:disabled{opacity:.55;cursor:default}
+#__ROOT_ID__ button[aria-pressed="true"],#__ROOT_ID__ .sc-primary{background:var(--sc-selected);color:var(--sc-on-selected);border-color:var(--sc-selected)}
+#__ROOT_ID__ .sc-choice{display:flex;align-items:center;justify-content:space-between;text-align:left;gap:8px}
+#__ROOT_ID__ .sc-choice strong{font-size:17px;overflow-wrap:anywhere}
+#__ROOT_ID__ .sc-actions{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+#__ROOT_ID__ .sc-actions button{font-size:13px;font-weight:700}
+#__ROOT_ID__ details{margin-top:8px}
+#__ROOT_ID__ summary{font-size:13px;font-weight:700;padding:4px 0}
+#__ROOT_ID__ .sc-member{padding:10px 0;border-top:1px solid var(--sc-line)}
+#__ROOT_ID__ .sc-member-label{display:flex;gap:8px;align-items:center;justify-content:space-between;font-size:13px;flex-wrap:wrap}
+#__ROOT_ID__ .sc-editor{background:var(--sc-soft);padding:12px;margin-top:10px;border-radius:7px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+#__ROOT_ID__ input[type="text"],#__ROOT_ID__ select{font:inherit;width:150px;max-width:100%;padding:7px;color:var(--sc-text);background:var(--sc-bg);border:1px solid var(--sc-line);border-radius:5px}
+#__ROOT_ID__ .sc-editor label{font-size:13px;font-weight:700}
+#__ROOT_ID__ .sc-recommendation{font-size:13px;margin-top:9px}
+#__ROOT_ID__ .sc-footer{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-top:17px}
+#__ROOT_ID__ .sc-footer button{font-weight:700}
+#__ROOT_ID__ .sc-status{font-size:13px;margin:12px 0 0;min-height:20px}
+#__ROOT_ID__ .sc-status[data-error="true"]{color:var(--sc-error)}
+#__ROOT_ID__ .sc-source-box{margin-top:14px;border-top:1px solid var(--sc-line);padding-top:14px}
+#__ROOT_ID__ .sc-evidence-nav{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+#__ROOT_ID__ .sc-evidence-nav button{font-size:13px}
+#__ROOT_ID__ .sc-image-viewport{overflow:auto;max-height:650px;border:1px solid var(--sc-line);background:#fff;margin:12px 0}
+#__ROOT_ID__ .sc-image-viewport img{display:block;max-width:none;height:auto}
+#__ROOT_ID__ .sc-scope{background:var(--sc-soft);padding:12px;margin:12px 0;border-radius:7px;overflow-wrap:anywhere}
+#__ROOT_ID__ .sc-summary-row{padding:12px 0;border-bottom:1px solid var(--sc-line)}
+#__ROOT_ID__ .sc-note{font-size:13px}
+#__ROOT_ID__ [hidden]{display:none!important}
+@media(max-width:520px){#__ROOT_ID__{padding:13px}#__ROOT_ID__ .sc-head{display:block;padding-right:60px}#__ROOT_ID__ .sc-count{margin-top:6px}#__ROOT_ID__ .sc-title{flex-wrap:wrap}#__ROOT_ID__ .sc-choices{grid-template-columns:1fr 1fr}#__ROOT_ID__ .sc-choice{display:block}#__ROOT_ID__ .sc-choice strong{display:block}#__ROOT_ID__ button{min-height:42px}}
+</style>
+<script type="application/json" id="__ROOT_ID__-data">__REVIEW_BUNDLE__</script>
+<script>
+(()=>{
+ 'use strict';
+ const root=document.getElementById('__ROOT_ID__');
+ const bundle=JSON.parse(document.getElementById('__ROOT_ID__-data').textContent);
+ const review=bundle.review,groups=review.issues,byId=Object.fromEntries(groups.map(g=>[g.id,g])),labels=Object.fromEntries(review.rows.map(r=>[r.key,r.label]));
+ const content=root.querySelector('[data-content]'),counter=root.querySelector('[data-count]'),status=root.querySelector('[data-status]');
+ root.querySelector('[data-paper]').textContent=review.paper;
+ root.querySelector('[data-context]').textContent=`${groups.length} issue groups · ${review.rows.length} estimates · ${review.phase==='coverage'?'Eligibility and coverage':'Field adjudication'}`;
+ let decisions={},revision=0,expanded={},view='list',active=groups[0]?.id,imageIndex=0,fullPage=false,zoom=1,editor=null,busy=false,undo=null;
+ let received=!!bundle.initial_state.confirmed,requested=false,confirmedAt=null;
+ const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const val=x=>x===''?'Blank':String(x);
+ const clone=x=>JSON.parse(JSON.stringify(x));
+ const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+ function msg(text,error=false){status.textContent=text;status.dataset.error=String(error);}
+ function decision(g,m){return decisions[g.id]?.[m]||null;}
+ function result(g,d){return d.choice==='custom'?d.value:g[d.choice];}
+ function valid(g,d){
+  if(!d||!['human','ai','custom','defer'].includes(d.choice)||typeof(d.note??'')!=='string'||typeof(d.separate??false)!=='boolean')return false;
+  if(d.choice!=='custom')return true;
+  const v=d.value;if(typeof v!=='string')return false;
+  if(g.field===null&&!['include','exclude'].includes(v))return false;
+  if(v===''&&!g.allow_empty)return false;
+  if(g.allowed_values&&!g.allowed_values.includes(v))return false;
+  if(g.numeric&&!(g.missing_values||[]).includes(v)&&(!v.trim()||!Number.isFinite(Number(v))))return false;
+  return true;
+ }
+ function expand(compact){
+  if(!compact||typeof compact!=='object'||Array.isArray(compact)||Object.keys(compact).some(id=>!byId[id]))throw Error('Wrong review groups');
+  const next={};for(const g of groups){const c=compact[g.id]||{},o=c.overrides||{};if(Object.keys(o).some(k=>!g.members.includes(k)))throw Error('Wrong group scope');next[g.id]={};for(const m of g.members){const d=Object.hasOwn(o,m)?o[m]:c.default;if(d){if(!valid(g,d))throw Error('Invalid saved choice');next[g.id][m]=clone(d);}}}return next;
+ }
+ function compact(){const out={};for(const g of groups){const votes=new Map();for(const m of g.members){const s=JSON.stringify(decision(g,m));votes.set(s,(votes.get(s)||0)+1);}const common=JSON.parse([...votes].sort((a,b)=>b[1]-a[1])[0][0]);out[g.id]={default:common,overrides:{}};for(const m of g.members){const d=decision(g,m);if(!same(d,common))out[g.id].overrides[m]=d;}}return out;}
+ function count(){let done=0,total=0;for(const g of groups)for(const m of g.members){total++;const d=decision(g,m);if(d&&d.choice!=='defer')done++;}return {done,total,pending:total-done};}
+ function effective(g,target=''){const ms=target?[target]:g.members.filter(m=>!decision(g,m)?.separate);const ds=ms.map(m=>decision(g,m));return ds.length&&ds[0]&&ds.every(d=>same(d,ds[0]))?ds[0]:null;}
+ function remember(){
+  const c=count();const state={modelContent:{review_id:bundle.review_id,snapshot_id:bundle.snapshot_id,status:'draft_not_project_receipt',decided:c.done,total:c.total},privateContent:{snapshot_id:bundle.snapshot_id,revision,groups:compact(),requested,confirmedAt}};
+  if(new TextEncoder().encode(JSON.stringify(state)).length>=16000){msg('Choices remain in this panel. Draft persistence is full; keep it open until confirmation.',true);return;}
+  if(typeof window.openai?.setWidgetState!=='function'){msg('Draft persistence is unavailable. Keep this panel open until confirmation.',true);return;}
+  try{window.openai?.setWidgetState?.(state)?.catch(()=>msg('Draft persistence is unavailable. Keep this panel open until confirmation.',true));}catch(e){msg('Draft persistence is unavailable. Keep this panel open until confirmation.',true);}
+ }
+ function restore(snapshot){const s=snapshot?.privateContent;if(!s||s.snapshot_id!==bundle.snapshot_id||!Number.isInteger(s.revision)||s.revision<revision)return;try{decisions=expand(s.groups);revision=s.revision;requested=!!s.requested;confirmedAt=s.confirmedAt||null;render();}catch(e){msg('Saved draft does not match this review; it was not applied.',true);}}
+ function change(){undo=clone(decisions);revision++;requested=false;confirmedAt=null;}
+ function choose(g,target,d){change();if(!decisions[g.id])decisions[g.id]={};for(const m of target?[target]:g.members.filter(k=>!decision(g,k)?.separate)){decisions[g.id][m]={...d,separate:!!target};}editor=null;render();msg('Draft updated. Confirm after reviewing your decisions.');remember();}
+ function controls(g,target=''){
+  const d=effective(g,target),disabled=busy||requested||received;
+  return `<div class="sc-choices">${['human','ai'].map(c=>`<button class="sc-choice" type="button" data-act="${c}" data-g="${esc(g.id)}" data-m="${esc(target)}" aria-pressed="${d?.choice===c}" ${disabled?'disabled':''}><span>Use ${c==='human'?'Human':'AI'}</span><strong>${esc(val(g[c]))}</strong></button>`).join('')}</div><div class="sc-actions"><button type="button" data-act="custom" data-g="${esc(g.id)}" data-m="${esc(target)}" aria-pressed="${d?.choice==='custom'}" ${disabled?'disabled':''}>Other value${d?.choice==='custom'?': '+esc(val(d.value)):''}</button><button type="button" data-act="defer" data-g="${esc(g.id)}" data-m="${esc(target)}" aria-pressed="${d?.choice==='defer'}" ${disabled?'disabled':''}>Defer</button></div>${editor?.g===g.id&&editor.m===target?editorHTML(g,target):''}`;
+ }
+ function editorHTML(g,m){const values=g.field===null?['include','exclude']:g.allowed_values;return `<div class="sc-editor"><label for="${root.id}-other">Final value</label>${values?`<select id="${root.id}-other">${values.map(v=>`<option value="${esc(v)}">${esc(val(v))}</option>`).join('')}</select>`:`<input id="${root.id}-other" type="text" value="${esc(editor.value||'')}">${g.allow_empty?`<label><input type="checkbox" id="${root.id}-blank"> Use blank</label>`:''}`}<label for="${root.id}-note">Reason (optional)</label><input id="${root.id}-note" type="text" value="${esc(editor.note||'')}"><button type="button" data-act="apply" data-g="${esc(g.id)}" data-m="${esc(m)}">Apply</button><button type="button" data-act="cancel">Cancel</button></div>`;}
+ function memberHTML(g){return `<details data-g="${esc(g.id)}" ${expanded[g.id]?'open':''}><summary>${g.members.length} affected ${g.members.length===1?'estimate':'estimates'} · scope and individual exceptions</summary>${g.members.map(m=>{const d=decision(g,m);return `<div class="sc-member"><div class="sc-member-label"><span>${esc(labels[m]||m)} · ${d?d.choice==='defer'?'Deferred':esc(val(result(g,d))):'Pending'}</span><button type="button" data-act="${d?.separate?'rejoin':'separate'}" data-g="${esc(g.id)}" data-m="${esc(m)}" ${busy||requested||received?'disabled':''}>${d?.separate?'Rejoin group':'Separate exception'}</button></div>${d?.separate?controls(g,m):''}</div>`;}).join('')}</details>`;}
+ function groupHTML(g){const available=g.members.some(m=>!decision(g,m)?.separate);return `<section class="sc-group"><div class="sc-title"><div><h3>${esc(g.title)}</h3><div class="sc-meta">${esc(g.field??'Eligibility / coverage')} · ${esc(g.scope)}</div></div><button type="button" data-act="source" data-g="${esc(g.id)}">View source</button></div>${available?controls(g):'<p>All estimates are separate exceptions.</p>'}<p class="sc-recommendation"><strong>AI recommendation:</strong> ${esc(g.recommendation)}</p>${memberHTML(g)}</section>`;}
+ function evidenceHTML(g){
+  const e=g.evidence[imageIndex],name=fullPage?e.full_image:e.image,image=name?bundle.images[name]:null;
+  return `<div class="sc-footer"><button type="button" data-act="list">Back to all ${groups.length} groups</button><span class="sc-note">Source evidence</span></div><section class="sc-group"><h3>${esc(g.title)}</h3><div class="sc-meta">${esc(g.field??'Coverage')} · ${esc(g.scope)}</div>${controls(g)}${memberHTML(g)}</section><div class="sc-scope"><strong>AI recommendation:</strong> ${esc(g.recommendation)}<details><summary>Approved rule and reasoning</summary><p>${esc(g.rule)}</p><p>${esc(g.explanation)}</p></details></div><div class="sc-evidence-nav">${g.evidence.map((x,i)=>`<button type="button" data-act="image" data-index="${i}" aria-pressed="${i===imageIndex}">${esc(x.label||'Source '+(i+1))}</button>`).join('')}</div><p class="sc-note"><strong>Source:</strong> ${esc(e.locator)}</p><p><strong>What to check:</strong> ${esc(e.look_at)}</p>${e.image?`<div class="sc-evidence-nav">${image?`<button type="button" data-act="zoom">${zoom===1?'Enlarge screenshot':'Fit screenshot'}</button>`:''}${e.full_image?`<button type="button" data-act="full">${fullPage?'Show table crop':'Show full page'}</button>`:''}</div>${image?`<div class="sc-image-viewport"><img src="${image}" alt="${esc(e.locator)}" style="width:${zoom*100}%"></div>`:'<button type="button" data-act="source-message">Open this source image in chat</button>'}`:`<div class="sc-scope"><strong>Evidence limitation:</strong> ${esc(e.limitation)}<p><strong>Source excerpt / transcription:</strong> ${esc(e.excerpt)}</p></div>`}<div class="sc-footer"><button type="button" data-act="list">Back to all ${groups.length} groups</button></div>`;
+ }
+ function summaryHTML(){return `<h3>Review your decisions</h3>${groups.map(g=>{const bins=new Map();for(const m of g.members){const d=decision(g,m),label=!d?'Pending':d.choice==='defer'?'Deferred':`${d.choice==='human'?'Human':d.choice==='ai'?'AI':'Other value'}: ${val(result(g,d))}`;if(!bins.has(label))bins.set(label,[]);bins.get(label).push(labels[m]||m);}return `<div class="sc-summary-row"><strong>${esc(g.title)}</strong> · ${esc(g.field??'Coverage')}${[...bins].map(([l,ms])=>`<p>${esc(l)} · ${ms.length} ${ms.length===1?'estimate':'estimates'}</p><details><summary>Show affected estimates</summary><div class="sc-note">${ms.map(esc).join('; ')}</div></details>`).join('')}</div>`;}).join('')}<div class="sc-footer"><button type="button" data-act="list">Back to evidence</button>${received?'<span>Confirmed decisions already received by Codex.</span>':`<button type="button" class="sc-primary" data-act="confirm" ${busy||count().pending?'disabled':''}>${busy?'Requesting submission...':requested?'Retry sending confirmed decisions':review.phase==='coverage'?'Confirm coverage and send to Codex':'Confirm and send to Codex'}</button>`}</div>`;}
+ function render(){const c=count();counter.textContent=`${c.done} / ${c.total} decisions`;content.innerHTML=view==='evidence'?evidenceHTML(byId[active]):view==='summary'?summaryHTML():groups.map(groupHTML).join('')+`<div class="sc-footer"><span class="sc-note">${received?'Confirmed decisions received':requested?'Submission requested; check the chat for receipt':c.pending?c.pending+' decisions pending':'All decisions selected'}</span><div class="sc-actions">${!received&&!requested?`<button type="button" data-act="undo" ${!undo?'disabled':''}>Undo last change</button>`:'<button type="button" data-act="edit">Edit decisions</button>'}<button type="button" class="sc-primary" data-act="summary">Review decisions</button></div></div>`;content.querySelectorAll('button,summary').forEach(x=>x.classList.add('cursor-interaction'));if(busy)content.querySelectorAll('button,input,select').forEach(x=>x.disabled=true);}
+ async function sendSource(){if(typeof window.openai?.sendFollowUpMessage!=='function'){msg('Source display in chat is unavailable in this client. Ask Codex to show the source for this issue.',true);return;}const req={review_id:bundle.review_id,snapshot_id:bundle.snapshot_id,source_review_sha256:bundle.source_review_sha256,issue:active,index:imageIndex,full:fullPage};const prompt=['Please show the original source image for this Second Coder issue in the same conversation, preserving my review choices. This is an evidence request, not a decision confirmation.','Session: '+bundle.session,'SECOND_CODER_SOURCE_REQUEST',JSON.stringify(req),'END_SECOND_CODER_SOURCE_REQUEST'].join('\n');try{await window.openai.sendFollowUpMessage({prompt,title:'Show this source evidence in chat'});msg('Source display requested. Your draft choices remain in this panel.');}catch(e){msg('The evidence request was not completed. You can retry.',true);}}
+ root.addEventListener('toggle',e=>{if(e.target.tagName==='DETAILS'&&e.target.dataset.g)expanded[e.target.dataset.g]=e.target.open;},true);
+ root.addEventListener('click',async e=>{
+  const b=e.target.closest('button[data-act]');if(!b||!root.contains(b)||b.disabled||busy)return;
+  const a=b.dataset.act,g=byId[b.dataset.g],m=b.dataset.m||'';
+  if(['human','ai','defer'].includes(a)){choose(g,m,{choice:a});return;}
+  if(a==='custom'){const d=effective(g,m);editor={g:g.id,m,value:d?.choice==='custom'?d.value:'',note:d?.note||''};render();const field=root.querySelector('#'+root.id+'-other');if(field.tagName==='SELECT'&&d?.choice==='custom')field.value=d.value;return;}
+  if(a==='cancel'){editor=null;render();return;}
+  if(a==='apply'){const field=root.querySelector('#'+root.id+'-other'),empty=root.querySelector('#'+root.id+'-blank')?.checked,v=empty?'':field.value.trim(),note=root.querySelector('#'+root.id+'-note').value.trim();if(!empty&&!v&&field.tagName!=='SELECT'){msg('Enter a value or explicitly choose Use blank.',true);return;}const d={choice:'custom',value:v,note};if(!valid(g,d)){msg('Use a value allowed by the approved rule.',true);return;}choose(g,m,d);return;}
+  if(a==='separate'||a==='rejoin'){change();if(!decisions[g.id])decisions[g.id]={};decisions[g.id][m]={choice:'defer',separate:a==='separate'};expanded[g.id]=true;editor=null;render();msg('This estimate needs a new choice.');remember();return;}
+  if(a==='undo'){if(undo){decisions=undo;undo=null;revision++;render();remember();}return;}
+  if(a==='edit'){received=false;requested=false;confirmedAt=null;revision++;render();remember();msg('Amend the choices, then review and confirm again.');return;}
+  if(a==='source'){active=g.id;imageIndex=0;fullPage=false;zoom=1;editor=null;view='evidence';render();return;}
+  if(a==='image'){imageIndex=Number(b.dataset.index);fullPage=false;zoom=1;render();return;}
+  if(a==='zoom'){zoom=zoom===1?2:1;render();return;}
+  if(a==='full'){fullPage=!fullPage;zoom=1;render();return;}
+  if(a==='source-message'){await sendSource();return;}
+  if(a==='summary'||a==='list'){view=a==='summary'?'summary':'list';editor=null;render();return;}
+  if(a!=='confirm'||count().pending)return;
+  if(typeof window.openai?.sendFollowUpMessage!=='function'){msg('Direct submission is unavailable in this client. No decisions were sent. Tell Codex so it can preserve this review and discuss a supported interface.',true);return;}
+  if(!confirmedAt)confirmedAt=new Date().toISOString();
+  const payload={format:bundle.format,kind:'confirmed',review_id:bundle.review_id,snapshot_id:bundle.snapshot_id,source_review_sha256:bundle.source_review_sha256,base_revision:bundle.base_revision,state:{review_sha256:bundle.source_review_sha256,revision,confirmed:true,confirmed_at:confirmedAt,groups:compact()}};
+  const prompt=['I confirm these Second Coder decisions. Validate and import this exact submission, then continue the existing '+(review.phase==='coverage'?'coverage-to-field-review workflow.':'checks and adjudicated-codesheet workflow.'),'Session: '+bundle.session,'Preserve original inputs and prior decisions. Do not silently change explicitly confirmed values.','SECOND_CODER_CONFIRMED_DECISIONS',JSON.stringify(payload),'END_SECOND_CODER_CONFIRMED_DECISIONS'].join('\n');
+  busy=true;render();msg('Requesting submission. Complete the app confirmation if it appears.');
+  try{await window.openai.sendFollowUpMessage({prompt,title:'Send these adjudication decisions to Codex'});requested=true;remember();msg('Submission requested. Check the chat for Codex receipt.');}
+  catch(e){msg('Submission was not completed. Your choices remain here; retry when ready.',true);}
+  finally{busy=false;render();}
+ });
+ window.addEventListener('openai:set_globals',e=>{if(!busy&&e.detail?.globals?.widgetState)restore(e.detail.globals.widgetState);});
+ decisions=expand(bundle.initial_state.groups);render();restore(window.openai?.widgetState);
+ if(received)msg('These previously confirmed choices have been received. Use Edit decisions to amend them.');
+})();
+</script>
