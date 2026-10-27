@@ -1,0 +1,50 @@
+<div id="__CHECK_ROOT__" aria-label="Second coder compatibility check">
+  <h3>Check the review connection</h3>
+  <button type="button" class="btn btn-primary cursor-interaction" data-send>Send compatibility confirmation</button>
+  <p data-status role="status" aria-live="polite">Checking whether this client can return a message to Codex.</p>
+</div>
+<script type="application/json" id="__CHECK_ROOT__-data">__CHECK_BUNDLE__</script>
+<script>
+(() => {
+  'use strict';
+  const root = document.getElementById('__CHECK_ROOT__');
+  const config = JSON.parse(document.getElementById('__CHECK_ROOT__-data').textContent);
+  const button = root.querySelector('[data-send]');
+  const status = root.querySelector('[data-status]');
+  const available = () => typeof window.openai?.sendFollowUpMessage === 'function';
+  function reportCapability() {
+    button.disabled = !available();
+    status.textContent = available()
+      ? 'Ready. This sends a test message containing no research data or coding decisions.'
+      : 'This client cannot send the confirmation. Tell Codex that the compatibility button is unavailable.';
+  }
+  button.addEventListener('click', async () => {
+    if (!available() || button.disabled) return;
+    const payload = {
+      format: config.format,
+      check_id: config.check_id,
+      rendered: true,
+      follow_up_available: true,
+      widget_state_available: typeof window.openai?.setWidgetState === 'function'
+    };
+    const prompt = [
+      'This is the requested Second Coder client compatibility confirmation. It contains no research decisions. Verify it against the saved check before reporting success.',
+      'SECOND_CODER_COMPATIBILITY_CHECK',
+      JSON.stringify(payload),
+      'END_SECOND_CODER_COMPATIBILITY_CHECK'
+    ].join('\n');
+    button.disabled = true;
+    status.textContent = 'Requesting submission. Complete the app confirmation if it appears.';
+    try {
+      await window.openai.sendFollowUpMessage({prompt, title: 'Send the second-coder compatibility check'});
+      status.textContent = 'Submission requested. Codex will confirm receipt in the chat; you can retry if needed.';
+    } catch (error) {
+      status.textContent = 'Submission was not completed. Your project is unchanged; try again when ready.';
+    } finally {
+      button.disabled = !available();
+    }
+  });
+  window.addEventListener('openai:set_globals', reportCapability);
+  reportCapability();
+})();
+</script>
