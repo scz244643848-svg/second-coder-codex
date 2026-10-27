@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this workflow in research, please cite this version-specific Zenodo software record."
+type: software
+title: "A Second-Coder Codex Skill: Researcher-Guided Data Extraction for Meta-Analysis"
+authors:
+  - family-names: Shi
+    given-names: Chunzhi
+    orcid: "https://orcid.org/0009-0003-0596-5119"
+    affiliation: "Department of Economics and Finance, University of Canterbury, Christchurch, New Zealand; UCMeta, University of Canterbury, Christchurch, New Zealand"
+  - family-names: Zhu
+    given-names: Zhehan
+    orcid: "https://orcid.org/0009-0007-5978-9375"
+    affiliation: "School of Public Administration, Zhongnan University of Economics and Law, Wuhan, China"
+  - family-names: Reed
+    given-names: W. Robert
+    orcid: "https://orcid.org/0000-0002-6459-8174"
+    affiliation: "Department of Economics and Finance, University of Canterbury, Christchurch, New Zealand; UCMeta, University of Canterbury, Christchurch, New Zealand"
+contact:
+  - family-names: Shi
+    given-names: Chunzhi
+    orcid: "https://orcid.org/0009-0003-0596-5119"
+version: "2026.10.26"
+doi: "10.5281/zenodo.23657589"
+url: "https://doi.org/10.5281/zenodo.23657589"
+license: MIT
+abstract: |-
+  This package provides a researcher-guided Codex workflow for using AI as a second coder in meta-analysis. Stage 1 clarifies the researcher's codebook, eligibility criteria, variable definitions and blank coding template, and produces a researcher-approved extraction prompt. Stage 2 prepares the selected articles, presents proposed eligible estimates for researcher approval, and completes AI coding without access to the completed human codesheet. Stage 3 compares human and AI coding, presents grouped discrepancies with source evidence in an interactive review panel within the Codex conversation, and records the researcher's final decisions.
+
+  The output is an adjudicated codesheet for analysis, accompanied by supporting evidence and decision records. The package includes a user guide, skill instructions and local helper scripts. The review interface requires a Codex client that supports interactive in-conversation visualizations and the return of confirmed decisions to the conversation. Researchers remain responsible for approving coding rules, selecting eligible estimates and resolving disagreements.
+
+  The skill’s accuracy and time requirements have not been formally evaluated. Users should assess whether it improves coding accuracy and whether the time required is worthwhile in their own projects.
+keywords:
+  - meta-analysis
+  - data extraction
+  - second coding
+  - adjudication
+  - Codex
