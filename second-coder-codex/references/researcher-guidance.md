@@ -1,6 +1,6 @@
 # Researcher orientation and stage guidance
 
-Use this reference on first use, when introducing the workflow after installation, and when a stage transition needs clarification. It strengthens communication around the existing workflow; it does not replace the original Stage 1 procedure or add approval rounds.
+Use this reference on first use, when introducing the workflow after installation, and when a stage transition needs clarification. It strengthens communication around the existing workflow; it does not replace the original Stage 1 procedure or add scientific approval rounds.
 
 ## First introduction
 
@@ -16,11 +16,11 @@ Give one coherent overview before asking for materials. Cover the following in E
 | 2C: AI coding | Use fresh per-paper agents where available, record reasons, validate and merge coding | Usually no action; decide any newly discovered eligibility or rule issue before affected results are finalized |
 | 3: Compare and adjudicate | Match human and AI estimates, show all current-paper discrepancies in an interactive panel in this conversation with source evidence, save confirmed choices and validate final data | Provide human-coded data only for the named paper currently being adjudicated; inspect evidence, click Human / AI / Other value / Defer, and confirm the summary |
 
-Explain that the result is `Adjudicated_Codesheet.csv`, incorporating the researcher’s confirmed decisions and available for analysis, plus supporting records in one organized folder. After establishing the project folder, follow [startup and resumption](startup-and-resume.md) to verify readiness and the panel-to-chat path before an extended Stage 1 discussion. Codex announces and carries out the next authorized step; the researcher does not have to manage stage order or repeatedly say “continue.” Approval gates still require an explicit decision.
+Explain that the result is `Adjudicated_Codesheet.csv`, incorporating the researcher’s confirmed decisions and available for analysis, plus supporting records in one organized folder. After establishing the project folder, follow [startup and resumption](startup-and-resume.md) to prompt the researcher to choose or confirm a model and reasoning setting, record that choice, and verify readiness and the panel-to-chat path before an extended Stage 1 discussion. Codex announces and carries out the next authorized step; the researcher does not have to manage stage order or repeatedly say “continue.” Approval gates still require an explicit decision.
 
 Include this qualitative reminder:
 
-> For planning, allow approximately 30–60 minutes for Stage 1, potentially longer when materials are incomplete, ambiguous or inconsistent. This is practical planning guidance, not a measured completion time or a promise. The questioning also makes your eligibility criteria and variable definitions explicit. Estimate selection and final comparison can require substantial additional attention, depending on the papers, estimates, disagreements and your familiarity with the material. I will tell you exactly when I need information or a decision from you.
+> For planning, allow approximately 30–60 minutes for Stage 1, potentially longer when materials are incomplete, ambiguous or inconsistent. This is practical planning guidance, not a formally measured completion time or a promise. The questioning also makes your eligibility criteria and variable definitions explicit. Estimate selection and final comparison can require substantial additional attention, depending on the papers, estimates, disagreements and your familiarity with the material. I will tell you exactly when I need information or a decision from you.
 
 Use the qualified Stage 1 planning allowance above; do not promise completion within it, infer a fixed duration for later stages, or make unsupported accuracy/speed claims. Do not mechanically teach familiar research concepts or add examples to every question. Use a short example only when it helps a specific action.
 
