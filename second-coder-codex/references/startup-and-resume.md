@@ -2,9 +2,31 @@
 
 Use this reference when starting or resuming a project. These are technical readiness and navigation steps, not new scientific approval rounds. Keep the existing extraction, comparison, decision and finalization routines.
 
+## Choose and confirm the model
+
+After the opening overview and establishment of the project folder, and before the extended Stage 1 coding-rule discussion, initiate model selection. Installation alone does not require choosing settings or starting a research project. This is an operational choice, not approval of scientific coding rules.
+
+If a clear preference or confirmed choice has not already been supplied, prompt:
+
+> Before we develop your coding rules, let's choose the model and reasoning setting for this project. Do you already have a preferred configuration, or would you like me to consult current official OpenAI guidance and recommend one?
+>
+> If you would like a recommendation, tell me whether to prioritize accuracy or balance accuracy with cost and processing time.
+
+Adapt this prompt to information already provided; do not ask again for a known preference. If a recommendation is requested, consult current official OpenAI guidance, starting with [Models](https://learn.chatgpt.com/docs/models) and, where needed, [model selection](https://developers.openai.com/api/docs/guides/model-selection). Recommend a current reasoning model and a supported reasoning setting suitable for multi-step research, article text/table-image inspection and this client's tools. Explain the accuracy, cost and processing-time tradeoffs briefly. Describe this as a starting recommendation, not proof of superior extraction accuracy. Do not require the newest, most expensive model or the maximum reasoning setting, and do not infer equivalent effort from labels across model generations. If current guidance cannot be accessed, say so and help the researcher confirm an available choice without presenting remembered information as current guidance.
+
+Use reliable session information about available models when exposed. Otherwise ask the researcher which relevant options they can select; do not assume account access from a public model list. Respect a suitable configuration the researcher has already chosen. If a proposed choice lacks a required capability, explain the specific issue and help identify an available alternative.
+
+Explain how to select the model and reasoning setting in the actual Codex client. In the desktop interface this uses the model/reasoning controls; in the interactive CLI it uses `/model`. The researcher selects the settings and confirms the choice. Do not change global configuration or claim to have switched the active model merely because the researcher accepted a recommendation. If settings are not directly observable, ask for the displayed model name and reasoning setting and record them as researcher-confirmed rather than independently verified. Do not invent an underlying model snapshot, hidden configuration or a setting not shown by the client.
+
+Save the model name, reasoning setting, confirmation date, and whether the settings were observed or researcher-confirmed in the existing project progress/run record. For a recommendation, also record the guidance links and date consulted. Link to that record from `PROJECT_GUIDE.md`; do not create a separate approval ledger or replace saved-state formats. Wait for selection/confirmation before the extended Stage 1 discussion, then continue the existing readiness and compatibility steps without another generic permission request.
+
+For fresh per-paper coding or prompt-review agents, use the confirmed configuration where the actual host permits it. Check and record separately configured agent models/reasoning settings when exposed. If overrides or the resolved agent settings are unavailable, disclose that limit and record inherited/default or unknown settings accurately; do not claim uniform settings without evidence. Do not silently substitute a different model. If a different configuration is needed, explain it and obtain the researcher's choice before affected coding begins. Document subsequent changes and the affected stage/batch without overwriting earlier run records.
+
+On resumption, reuse a recorded confirmed choice when the settings remain the same. Check reliable session metadata if exposed; ask only when a consequential change or missing setting cannot otherwise be established. For an older project without a model record, confirm settings before further research work; do not infer settings for already completed work or restart settled coding-rule approvals. If a model is retired or unavailable, explain the issue and help the researcher choose an available replacement. Never silently upgrade or rerun completed coding.
+
 ## First project start
 
-After the opening overview, establish the intended project folder. Confirm read access to designated inputs and a writable location for generated outputs. Do not read completed human coding to test access. Installation alone does not authorize starting a research project.
+After the opening overview, establish the intended project folder and complete model selection as described above. Confirm read access to designated inputs and a writable location for generated outputs. Do not read completed human coding to test access. Installation alone does not authorize starting a research project.
 
 Locate Python 3.10+ and test whether `pymupdf` can be imported. Routine project-local setup is allowed within the user's authorization and environment permissions; explain any action that requires their involvement. Check whether fresh coding/prompt-review agents are available and disclose the existing fallback if not. No completed human data are needed for these checks.
 
@@ -42,6 +64,7 @@ Create or update `PROJECT_GUIDE.md` in the project folder. Keep it short and lin
 
 - The existing progress/state record and current batch/paper status.
 - The current approved prompt and blank template, with their versions.
+- The existing run record containing the confirmed model/reasoning settings and any separately configured coding-agent settings.
 - The existing rule-decision, estimate-approval and adjudication records.
 - The current saved review session and confirmed receipt, when applicable.
 - The latest final output folder and the exact next action or missing input.
