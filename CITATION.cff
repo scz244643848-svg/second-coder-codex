@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this workflow in research, please cite this version-specific Zenodo software record."
+message: "Please cite the package version used and this Zenodo software record. Package 2026.10.29 is a documentation and startup-guidance update to the existing record; its DOI is retained."
 type: software
 title: "A Second-Coder Codex Skill: Researcher-Guided Data Extraction for Meta-Analysis"
 authors:
@@ -19,7 +19,7 @@ contact:
   - family-names: Shi
     given-names: Chunzhi
     orcid: "https://orcid.org/0009-0003-0596-5119"
-version: "2026.10.26"
+version: "2026.10.29"
 doi: "10.5281/zenodo.23657589"
 url: "https://doi.org/10.5281/zenodo.23657589"
 license: MIT
@@ -28,7 +28,7 @@ abstract: |-
 
   The output is an adjudicated codesheet for analysis, accompanied by supporting evidence and decision records. The package includes a user guide, skill instructions and local helper scripts. The review interface requires a Codex client that supports interactive in-conversation visualizations and the return of confirmed decisions to the conversation. Researchers remain responsible for approving coding rules, selecting eligible estimates and resolving disagreements.
 
-  The skill’s accuracy and time requirements have not been formally evaluated. Users should assess whether it improves coding accuracy and whether the time required is worthwhile in their own projects.
+  The skill’s accuracy and time requirements have not been formally evaluated.
 keywords:
   - meta-analysis
   - data extraction

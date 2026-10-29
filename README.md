@@ -1,6 +1,6 @@
 # A Second-Coder Codex Skill: Researcher-Guided Data Extraction for Meta-Analysis
 
-Authors: Chunzhi Shi, Zhehan Zhu and W. Robert Reed. Package version: 2026.10.26. License: [MIT](LICENSE). See [release notes](RELEASE_NOTES.md), [licensing and citation](LICENSING.md) and the [version-specific Zenodo record](https://doi.org/10.5281/zenodo.23657589).
+Authors: Chunzhi Shi, Zhehan Zhu and W. Robert Reed. Package version: 2026.10.29. License: [MIT](LICENSE). See [release notes](RELEASE_NOTES.md), [licensing and citation](LICENSING.md) and the [Zenodo software record](https://doi.org/10.5281/zenodo.23657589).
 
 ## Introduction
 
@@ -22,11 +22,17 @@ You supply your own research question, eligibility criteria, variable definition
 
 You may also provide all source papers in one folder at the start. On entering Stage 2A, Codex inventories the accessible papers and supplements, then asks which approximately five to use first unless you have already designated a batch or authorized an ordering. Providing all papers does not make them all the current batch, and you do not need to upload them again later. Keep human coding separate and provide it one paper at a time when requested in Stage 3.
 
-For planning, allow approximately **30–60 minutes for Stage 1, potentially longer** if the materials are incomplete, ambiguous or inconsistent. This is practical planning guidance, not a measured completion-time estimate or a guarantee. Discussing the rules makes eligibility criteria and variable definitions explicit, including conventions that might otherwise remain unwritten.
+For planning, allow approximately **30–60 minutes for Stage 1, potentially longer** if the materials are incomplete, ambiguous or inconsistent. This is practical planning guidance, not a formally measured completion-time estimate or a guarantee. Discussing the rules makes eligibility criteria and variable definitions explicit, including conventions that might otherwise remain unwritten.
 
 **Estimate selection and final comparison can also require substantial researcher involvement.** Actual effort depends on the number and complexity of papers and estimates, the number of disagreements and your familiarity with the material. There is no fixed completion time or guaranteed efficiency gain.
 
 Before an extended Stage 1 discussion, Codex checks local file access, available Python/PDF tools and the interactive panel capability. It displays a small compatibility check and asks you to send its test confirmation. This contains no research data and approves no scientific decisions. If the client cannot display the panel or send the confirmation, Codex explains the limitation before you invest further effort. See [startup and resumption](second-coder-codex/references/startup-and-resume.md).
+
+## Choosing a model
+
+Use a current reasoning model available in Codex that can inspect article text and table images and use the tools required by this workflow. Choose a model intended for complex, multi-step work, taking account of your budget and acceptable processing time.
+
+Before starting, ask Codex to consult current official model guidance, recommend a model and reasoning setting, and explain the tradeoffs. Select the settings in Codex before proceeding.
 
 ## Install the skill and receive the introduction
 
@@ -50,7 +56,7 @@ Once installed, you can say:
 
 If the interface uses a different skill selector, select `second-coder-codex` or name the skill in your request. If installation cannot yet be discovered, ask Codex to read and follow the extracted skill's full `SKILL.md` path as a fallback.
 
-At first use, Codex should explain the whole workflow and your role, establish the project folder, and check compatibility before requesting the remaining materials. If it has just given that introduction after installation, it should move to the first material request instead of repeating it. At later transitions it explains only the current task, your next action and what follows. You do not need to repeatedly say “continue.”
+At first use, Codex should explain the whole workflow and your role, establish the project folder, prompt you to choose or confirm the model and reasoning setting, and check compatibility before requesting the remaining materials. If it has just given that introduction after installation, it should continue with the remaining startup steps instead of repeating it. Codex can consult current official guidance and recommend settings; you select and confirm them in Codex. It records your confirmed choice for the project and reuses it on resumption unless the settings have changed. At later transitions it explains only the current task, your next action and what follows. You do not need to repeatedly say “continue.”
 
 ## Prepare and provide materials
 
@@ -206,8 +212,10 @@ If Codex is waiting, it should state whether it needs a batch selection, particu
 
 If you use this workflow in research, please cite the version you used:
 
-Shi, C., Zhu, Z., & Reed, W. R. (2026). *A Second-Coder Codex Skill: Researcher-Guided Data Extraction for Meta-Analysis* (Version 2026.10.26) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23657589
+Shi, C., Zhu, Z., & Reed, W. R. (2026). *A Second-Coder Codex Skill: Researcher-Guided Data Extraction for Meta-Analysis* (Version 2026.10.29) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23657589
+
+Package version 2026.10.29 is a documentation and startup-guidance update to the existing Zenodo record, retaining DOI 10.5281/zenodo.23657589. No new Zenodo version or DOI is created for this update. Include the package version when citing the software. The earlier package is preserved in the [GitHub release v2026.10.26](https://github.com/scz244643848-svg/second-coder-codex/releases/tag/v2026.10.26). The [all-versions Zenodo DOI](https://doi.org/10.5281/zenodo.23657588) also remains unchanged.
 
 Machine-readable citation metadata is provided in [CITATION.cff](CITATION.cff). The citation request does not alter the [MIT license](LICENSE).
 
-The skill’s accuracy and time requirements have not been formally evaluated. Users should assess whether it improves coding accuracy and whether the time required is worthwhile in their own projects.
+The skill’s accuracy and time requirements have not been formally evaluated.
