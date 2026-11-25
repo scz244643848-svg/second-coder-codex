@@ -162,6 +162,8 @@ After one paper's adjudication, Codex saves its decisions, names the next paper 
 
 The decision summary provides the consolidated final review. You can review and confirm it or explicitly authorize finalization without another review round; numerical and structural validation still takes place. Accepted missing values and evidence limitations are recorded. Remaining unresolved decisions must not be silently described as finalized data.
 
+After batch finalization, Codex also provides `Stage3_Summary.md` under `05_Adjudication` in the delivered folder. It summarizes estimate coverage, pre-adjudication coding agreement and changes relative to the original human coding, using existing records only. Unsupported figures are marked `Not available from existing records.` This adds no review or approval step.
+
 ## Final deliverables and where they are saved
 
 Codex identifies the working project/batch location from your designated folder and tells you the actual saved paths. It preserves original inputs and stores generated work separately. After finalization it assembles one `Project_Outputs` folder in the agreed project location, using an unused destination if that name already exists. It provides a link/path to the folder and a direct link to the final codesheet. **Research output is delivered as a folder, not a ZIP.** The ZIP used to distribute this reusable skill is separate from project results.
