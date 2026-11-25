@@ -21,6 +21,18 @@ Adapt that request to existing designated current-paper inputs: accept CSV/XLSX 
 
 After adjudicating a paper, save its decisions, name the next paper in the batch and request only that paper's human-coded file. Reuse an already supplied current-paper-only file instead of requesting it again. Keep per-paper human inputs distinguishable in the existing batch records. After all papers are adjudicated, produce the batch's combined final codesheet through the existing finalization and delivery workflow, then follow the next-batch transition in `stage2.md`.
 
+## Stage 3 completion summary
+
+After the batch's final adjudicated codesheet has been generated and validated, create a concise English `Stage3_Summary.md` using only the existing input, mapping, comparison and adjudication records. This is a record of completed work, not another review or approval step. Do not repeat extraction, matching, comparison or adjudication, introduce new comparison rules, or request additional researcher input merely to complete the summary.
+
+Identify the batch, papers and finalization status, then report the following where the saved records support them:
+
+- **Estimate coverage:** original human and AI estimate counts, matched estimates, AI-only and human-only estimates before adjudication, and estimates retained in the final codesheet. Keep coverage counts separate from field agreement.
+- **Coding agreement before adjudication:** comparable estimate-field pairs, agreements (including already approved equivalent representations), substantive disagreements, and agreement/disagreement percentages. Use the same documented denominator and the existing approved equivalence, rounding and missing-value rules. Calculate rates only when the original comparison records establish both counts and a nonzero denominator; absence from a discrepancy panel does not establish agreement. State that agreement is not accuracy.
+- **Changes made during adjudication:** estimates added, estimates removed, and substantive field values changed in retained estimates present in the original human codesheet, all relative to the original human codesheet. Include recorded approved dependent recalculations. Count each affected estimate-field pair once using its original and final values, not clicks, groups or repeated confirmations; report added/removed estimates separately.
+
+For any unsupported count or rate, write `Not available from existing records.` Do not infer a zero or reconstruct missing comparison history. Link the final codesheet and the existing records supporting the summary. Save the report in the batch's existing adjudication outputs, include it under `05_Adjudication/<batch>/Stage3_Summary.md` in the categorized delivery folder, and provide its link with the final codesheet. Then continue the existing prompt review and next-batch handoff.
+
 ## Source evidence at the point of decision
 
 For each substantive disagreement, unresolved item, or eligibility/coverage decision requiring researcher judgment:
